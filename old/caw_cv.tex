@@ -1,0 +1,461 @@
+\documentclass[letterpaper,10pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{url}
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+{\large \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\LARGE Christopher A. Wood} & \url{www.christopher-wood.com} \\
+1114 Corella & woodc1@uci.edu \\
+Newport Beach, CA 92660 & 315-806-5939 \\
+\end{tabular*}}
+\\
+
+\vspace{-15pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Academic Information}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\begin{itemize}
+\item
+	\ressubheading{University of California Irvine}{Irvine, CA}{Ph.D. Computer Science}{2013 -- 2018 (expected)}
+	\begin{itemize}
+		\resitem{Advisors: Dr. Gene Tsudik and Dr. Stanis{\l}aw Jarecki}
+		\resitem{Research Areas: applied cryptography, security, and privacy}
+		\resitem{GPA: 4.0/4.0}
+	\end{itemize}
+
+	\ressubheading{Rochester Institute of Technology}{Rochester, NY}{M.S. Computer Science}{2012 -- 2013}
+	\begin{itemize}
+		\resitem{Advisor: Dr. Stanis{\l}aw Radziszowski}
+		%Optimal Representations of Cryptographically Significant Vectorial Boolean Functions
+		\resitem{Thesis: Large Substitution Boxes with Efficient Combinational Implementations}
+		\resitem{GPA: 4.0/4.0}
+		% \resitem{Thesis-related courses: Cryptography, Optimization Methods, Parallel Computing, Intelligent Security Systems, Data Communications and Networks, Algorithms, Secure Database Systems, Security Measurement and Testing}
+	\end{itemize}
+\item
+	\ressubheading{Rochester Institute of Technology}{Rochester, NY}{B.S. Computer Science and Software Engineering}{2008 -- 2012}
+	\begin{itemize}
+		\resitem{Concentrations: Computational Mathematics and Computer Engineering}
+		\resitem{Minor: Mathematics}
+		\resitem{GPA: 3.98/4.0 (Primary Field of Study GPA: 4.0/4.0)}
+		% \resitem{Main electives: Number Theory, Graph Theory, Operating Systems, Programming Language Concepts, Computer Organization, Modern Physics, Real-Time and Embedded Systems}
+	\end{itemize}
+
+\end{itemize}
+\vspace*{-16pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-15pt}
+\subsection*{Forthcoming}
+
+\begin{enumerate}[F-1.]
+
+% \item C. Wood, ``An Architecture for Supporting Automated Audits Over Encrypted Log Data in the Cloud,'' {\it in preparation}.
+\item P. Bajorski, A. Kaminsky, M. Kurdziel, M. Lukowiak, S. Radziszowski, and C. A. Wood, ``Modeling Multi-Epoch Message Distribution Times in Unbounded Spanning Trees,'' \emph{in preparation}.
+
+% \item C. A. Wood and J. Jacob, ``On the $L(2,1)$-Span of $k$-Regular $t$-Partite Graphs,'' \emph{in preparation}.
+
+% \item S. Skalicky and C. A. Wood, ``High-Level Graph-Based Methodology for Improving Performance of Pipelined Architectures,'' \emph{in preparation}.
+
+%% graph model for scheduling paper 
+%% sbox paper 
+%% bicubic paper 
+%% ndn-anonymity paper (sessions with Gene)
+%% ndn content masking stuff 
+
+% \item C. A. Wood, ``Ramsey Arrowing with SAT and SDP Solvers,'' \emph{in preparation}.
+
+\end{enumerate}
+\vspace{-15pt}
+\subsection*{Journal Articles}
+
+\begin{enumerate}[J-1.]
+
+\item C. A. Wood and J. Jacob, ``Characterization of Small Trees Based on their L(2,1)-Span,'' \emph{submitted}.
+
+\item C. A. Wood and J. Jacob, ``Forbidden Subtree Construction Techniques for Trees Under the L(2,1)-Labeling Problem,'' \emph{submitted}.
+
+\item P. Bajorski, A. Kaminsky, M. Kurdziel, M. Lukowiak, S. Radziszowski, and C. Wood, ``Statistical Analysis and Modeling of a Tree-Based Group Key Distribution Method in Tactical Wireless Networks,'' {\it submitted}.
+
+\item M. Lukowiak, S. Radziszowski, J. Vallino, C. Wood, ``Cybersecurity Education: Bridging the Gap between Hardware and Software Domains,'' to appear in {\it ACM Transactions on Computing Education}.
+
+\end{enumerate}
+\vspace{-15pt}
+\subsection*{Conference Proceedings}
+\begin{enumerate}[C-1.]
+
+\item C. A. Wood, S. P. Radziszowski, and M. Lukowiak, ``Affine-Power S-Boxes over Galois Fields with Area-Optimized Logic Implementations,'' \emph{submitted}.
+
+\item C. A. Wood and E. Uzun, ``Flexible End-to-End Content Security in CCN,'' in \emph{Proceedings of the IEEE Consumer Communications and Networking Conference (CCNC 2014) Special Seesion: Information Centric Networking}, Las Vegas, Nevada. January 2014.
+
+\item S. Skalicky, C. A. Wood, M. Lukowiak, and M. Ryan, ``High Level Synthesis: Where Are We? A Case Study on Matrix Multiplication,'' to appear in {\it Proceedings of the 2013 International Conference on Reconfigurable Computing and FPGAs - ReConFig 2013}, Cancun, Mexico. December 2013.
+
+\item M. Lukowiak, A. Meneely, S. Radziszowski, J. Vallino, and C. Wood, ``Developing an Applied, Security-Oriented Computing Curriculum,'' in {\it Proceedings of the ASEE 2012}, San Antonio, Texas. June 2012.
+
+\item C. A. Wood, ``Chaos-Based Symmetric Key Cryptosystems,'' in {\it Proceedings of the 2011 International Conference on Security \& Management}, Las Vegas, Nevada. July 2011.
+
+\item C. A. Wood and R. K. Raj, ``Keyloggers in Cybersecurity Education,'' in {\it Proceedings of the 2010 International Conference on Security \& Management}, Las Vegas, Nevada. July 2010.
+
+\end{enumerate}
+
+\vspace{-15pt}
+\subsection*{Theses}
+\begin{enumerate}[T-1.]
+	\item C. A. Wood, ``Large Substitution Boxes with Efficient Combinational Implementations,'' M.S. Thesis, Computer Science, Rochester Institute of Technology, Rochester, NY. August 2013.
+\end{enumerate}
+
+\vspace{-15pt}
+\subsection*{Surveys}
+\begin{enumerate}[S-1.]
+	\item C. A. Wood, ``Small Folkman Numbers.'' \emph{Draft available online:} \url{http://christopher-wood.com/papers/FolkmanSurvey.pdf}.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{-16pt}\resheading{Presentations and Posters}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}[P-1.]
+
+\item ``On the $L(2,1)$ Labeling of Trees,'' with Dr. Jobby Jacob (presenter), \emph{Joint Mathematics Meetings}, Baltimore, MD. January 15-18, 2014.
+
+\item ``Secure Content Dissemination in Content Centric Networking,'' with Dr. Ersin Uzun, \emph{CCNxCon 2013, Palo Alto Research Center, Palo Alto, CA}. September 5, 2013.
+
+\item ``Characterization Results for the L(2,1)-Labeling Problem on Trees,'' \emph{AMS Sectional Meeting, RIT, Rochester, NY}. September 22, 2012.
+
+\item ``Chaos-Based Symmetric Key Cryptosystems,'' \emph{RIT Graduate Research Symposium, RIT, Rochester, NY}. July 22, 2011.
+
+\item ``Keyloggers in Cybersecurity Education,'' \emph{2010 International Conference on Security \& Management}, Las Vegas, Nevada. July 2010.
+
+\item ``Layered Driver Rootkit Detection on Microsoft Windows PCs,'' Poster Presentation, \emph{RIT Undergraduate Research Symposium, RIT, Rochester, NY}. August 24, 2009. 
+\end{enumerate}
+\vspace*{-16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Active Research Projects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\begin{itemize}
+
+\item
+	\ressubheading{3-Party Oblivious RAM with SSE Applications}{UC Irvine}{Applied Cryptography}{October 2013 - present}
+	\begin{itemize}
+		\resitem{\emph{Advisor:} Dr. Stanis{\l}aw Jarecki}
+		\resitem{\emph{Colleagues:} Dr. Sotirios Kentros (University of Connecticut) and Sky Faber (UC Irvine)}
+		\resitem{I am investigating various ways to improve the performance of Oblivious RAM constructions in a three-party setting using secure multiparty computation. We are beginning the design and development of a software system using our protocol to gather preliminary performance metrics and experiment with support for searchable symmetric encryption (SSE).}
+	\end{itemize}
+
+\item
+	\ressubheading{Privacy and Anonymity in Named Data Networking}{UC Irvine and PARC}{Security, Privacy, Content-Centric Networking}{September 2013 - present}
+	\begin{itemize}
+		\resitem{\emph{Advisors:} Dr. Gene Tsudik and Dr. Ersin Uzun (PARC)}
+		\resitem{I am investigating and implementing software for establishing session-based onion routing circuits, analogous to TOR, that enable consumer and producer anonymity in content-centric networks (e.g., CCN and NDN).}
+	\end{itemize}
+
+% \item
+%     \ressubheading{Hardware-Friendly Authenticated Encryption Algorithms}{RIT}{Applied Cryptography, Hardware Design}{August 2013 - present}
+%     \begin{itemize}
+%         \resitem{\emph{Colleagues:} Professor Alan Kaminsky, Dr. Stanis{\l}aw Radziszowski, Dr. Marcin Lukowiak, Dr. Michael Kurdziel}
+%         \resitem{Presently, we are investigating new techniques for designing block ciphers that support authenticated encryption and can be easily integrated with a proprietary military-grade encryption scheme and implemented in an FPGA.}
+%     \end{itemize}
+
+% \item
+% 	\ressubheading{Security and Privacy in Content-Centric Networking}{Xerox PARC}{Cryptography, Security, Information-Centric Networking}{July 2013 - September 2013}
+% 	\begin{itemize}
+% 		\resitem{\emph{Advisor:} Dr. Ersin Uzun}
+% 		\resitem{I designed an application-layer solution for secure content dissemination in content-centric networks. The defining properties of my design are strong end-to-end content protection, minimal round-trip message exchanges between consumers and producers, seamless content individualization, and reduced risk of key leakage while leveraging the use of in-network caches to efficiently share data throughout the network.}
+% 	\end{itemize}
+
+\item
+	\ressubheading{Circuit Minimization and Cryptographic Applications}{NIST}{Boolean Functions, Algorithms, Complexity Theory}{May 2013 - present}
+	\begin{itemize}
+		\resitem{\emph{Advisor:} Dr. Ren\'{e} Peralta} 
+		\resitem{\emph{Colleagues:} Cagdas Calik and Meltem Turan}
+		\resitem{I am designing and implementing algorithms and heuristic techniques for minimizing the combinational logic required to implement small linear and nonlinear circuits of cryptographic interest, such as the AES S-box and binary $GF(2)$ polynomial multiplication circuits. My primary focus is on improving the efficiency of known solutions through algorithmic changes and implementation improvements, such as through the application of multi-core parallel and grid computing.}
+	\end{itemize}
+
+\item
+	\ressubheading{Narrowing Edge Folkman Number Bounds}{RIT}{Combinatorics, Computational Graph Theory}{January 2013 - present}
+	\begin{itemize}
+		\resitem{\emph{Advisor:} Dr. Stanis{\l}aw Radziszowski}
+		\resitem{I am investigating various computational techniques to attempt to prove the conjecture that the edge Folkman number $F_e(3,3;4) \leq 127$, including a reduction of $G \to (3,3;4)^e$ to an equivalent $\mathsf{3-SAT}$ formula to be solved using modified (guided) SAT solvers.}
+	\end{itemize}
+
+% \item
+% 	\ressubheading{Secure Logging Schemes for Cloud-Based Applications}{RIT}{Cryptography, Computer Security, Secure Software Design}{July 2012 - May 2013}
+% 	\begin{itemize}
+% 		\resitem{\emph{Advisors:} Dr. Rajendra K. Raj (CS) and Dr. Andy Meneely (SE)}
+% 		\resitem{This research focused on the design and development of a secure logging architecture for cloud-based SaaS applications that utilizes ciphertext-policy attribute based encryption and authenticated hash chains for log file confidentiality and integrity, respectively. It features offline public and online private verifiability of the log files to detect modification, addition, deletion, and truncation attacks. Automated audits are supported with a structured data model.}
+% 	\end{itemize}
+
+% \item
+% 	\ressubheading{Wireless Ad-hoc Network Group Key Management}{RIT}{Applied Cryptography, Wireless Networking}{May 2011 - August 2013}
+% 	\begin{itemize}
+% 		\resitem{\emph{Advisors:} Dr. Stanis{\l}aw Radziszowski (CS), Dr. Marcin Lukowiak (CE), Dr. Peter Bajorski (Statistics)}
+% 		\resitem{In this work we designed a new key distribution scheme for wireless ad-hoc networks and a corresponding statistical model for predicting the key distribution times for the network under a variety of scenarios, includying variable connection and message transaction probabilities, network spanning tree degree distributions, and the number of messages required to transmit a message. I implemented the statistical model and verified its correctness with a supporting Monte Carlo simulation. We have a patent pending on our protocol.}
+% 	\end{itemize}
+	
+% \item
+% 	\ressubheading{Keyboard Biometric-Based Continuous Authentication Service}{RIT}{Intelligent Security Systems, Machine Learning, AI}{September - November 2012}
+% 	\begin{itemize}
+% 		\resitem{\emph{Advisor:} Dr. Leonid Reznik (CS)}
+% 		\resitem{I implemented a continuous authentication system based on dynamic, free-form user input for UNIX systems. It features a real-time keylogger for data acquisition and a cross-platform feature extraction and classification engine for authentication. WEKA was used to experiment with feature extraction and filtering techniques that account for a variety of use cases.}
+% 	\end{itemize}
+
+\item
+	\ressubheading{$L(2,1)$-Labeling Problem}{RIT}{Computational Graph Theory}{September 2011 - present}
+	\begin{itemize}
+		\resitem{\emph{Advisor:} Dr. Jobby Jacob (Mathematics)}
+		\resitem{We are studying the $L(2,1)$-span of bicubic graphs, which are $3$-regular bipartite graphs, and generalizing these results to larger $k$-regular and $t$-partite graphs.}
+		\resitem{Past results include the development of graph construction algorithms that can produce infinitely many trees with a $L(2,1)$-span of $(\Delta(T) + 2)$, as well as a complete $L(2,1)$-span characterization of all trees with up to twenty vertices.}
+	\end{itemize}
+
+% \item
+% 	\ressubheading{Rootkit Design and Secure Operating Systems}{RIT}{Computer Security, Operating Systems, Malware Design}{May 2009 - June 2011}
+% 	\begin{itemize}
+% 		\resitem{\emph{Advisor:} Dr. Rajendra K. Raj (CS)}
+% 		\resitem{This research focused on rootkit malware targeting the Windows NT family of operating systems, including user-mode and kernel-mode rootkit implementations and modern static and dynamic techniques. I developed a kernel filter driver for the keyboard device driver stack in C to help determine the presence of specific kind of keystroke-monitoring malware.}
+% 		\resitem{In the second phase of this project I studied secure operating system design principles at all levels of the software stack. The main deliverable was a technical case study for popular operating systems built for various purposes, including Microsoft Singularity, Chrome OS, Android, QNX, and Microsoft Azure.}
+% 	\end{itemize}
+
+% \item
+% 	\ressubheading{Rootkit Design, Implementation, and Detection}{RIT}{Computer Security, Operating Systems, Malware Design and Detection}{May 2009 -- Aug. 2009}
+% 	\begin{itemize}
+% 		\resitem{\emph{Advisor:} Dr. Rajendra K. Raj (CS)}
+% 		\resitem{Resulted in publication C-4 and presentation P-3.}
+		
+% 	\end{itemize}
+
+\end{itemize}
+\vspace*{-16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Professional Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\begin{itemize}
+
+\item
+	\ressubheading{Palo Alto Research Center, Computer Science Laboratory}{Palo Alto, CA}{Security and Privacy Research Intern}{July 2013 - September 2013}
+	\begin{itemize}
+		\resitem{Researched security and privacy aspects related to content-centric network (CCN).}
+		\resitem{Implemented the Green-Ateniese (pairing-based) and Chow-Weng-Yang-Deng (Schnorr-ElGamal-based) Proxy Re-Encryption schemes in Java for use in a CCNx application.}
+		\resitem{Studied and tested various techniques for securing content that is distributed throughout a CCN mesh for confidentiality purposes.}
+		\resitem{Experimented with techniques for improving name privacy in CCN.}
+	\end{itemize}
+
+\item
+	\ressubheading{Intel Corporation, Virtual \& Parallel Computing Group}{Folsom, CA}{Graphics Software Engineer Intern}{June 2012 - August 2012}
+	\begin{itemize}
+		\resitem{Developed production features for tool that processes hardware specifications to generate web content and source code for VHDL and C/C++ testbeds.}
+		\resitem{Interacted with internal customers within the VPG to utilize debug tools and environments for architecture specification and post-silicon testing.}
+	\end{itemize}
+
+\item
+	\ressubheading{L-3 Communications}{Victor, NY}{Software Engineer Intern}{March 2011 - August 2011}
+	\begin{itemize}
+		\resitem{Designed and implemented a library and supporting drivers for the u-blox NEO5/6 GPS receiver driven by an Analog Devices Blackfin processor.}
+		\resitem{Extended an existing FAT file system driver to add support for SD devices.}
+		\resitem{Improved functionality of a CPLD controller for an embedded power supply.}
+	\end{itemize}
+
+\item
+	\ressubheading{Rochester Software Associates}{Rochester, NY}{Software Engineer Intern}{November 2010 - March 2011}
+	\begin{itemize}
+		\resitem{Led the design, development, and documentation efforts for a new printer job management application that would service any number of jobs from clients across the network.}
+		\resitem{Tested and debugged an existing .NET implementation of an LPD client.}
+	\end{itemize}
+
+\item
+	\ressubheading{C Speed, LLC}{Liverpool, NY}{Software Engineer Intern}{May 2010 - August 2010}
+	\begin{itemize}
+		\resitem{Designed and implemented an internal manufacturing part supply management system.}
+		\resitem{Implemented embedded firmware features and test routines in C, C++, and assembly for Coldfire V2 processors.}
+	\end{itemize}
+\end{itemize}
+\vspace*{-16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Teaching \& Other Academic Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\begin{itemize}
+\item 
+	\ressubheading{Cryptography II}{RIT}{Guest Lecturer for Dr. Stanis{\l}aw Radziszowski (CS)}{April 8, 2013}
+	\begin{itemize}
+		\resitem{Lectured about recent research on the security and (hardware) implementation efficiency of cryptographic S-boxes.}
+	\end{itemize}
+
+\item 
+	\ressubheading{Hardware and Software Design with Cryptographic Applications}{RIT}{Teaching Assistant and Lecturer for Dr. Marcin Lukowiak (CE)}{February 2011 - May 2013}
+	\begin{itemize}
+		\resitem{Developed and delivered lecture material on cryptography, embedded software optimization techniques, the Impulse C high-level synthesis tool, and AES cache timing attacks.}
+		\resitem{Assisted students with weekly assignments and graded lab and project deliverables.}
+	\end{itemize}
+
+\item 
+	\ressubheading{Computer Science I, II, and IV}{RIT}{Student Lab Assistant and Grader}{January 2009 - present}
+	\begin{itemize}
+		\resitem{Proctor problem solving sessions and run lab meetings with lectures of weekly material.}
+		\resitem{Grade weekly lab assignments and midterm examinations.}
+	\end{itemize}
+
+\item 
+	\ressubheading{Personal Software Engineering}{RIT}{Teaching Assistant for Professor Tom Reichlmayr (SE)}{December 2011 - March 2012}
+	\begin{itemize}
+		\resitem{Assisted students with in-class programming assignments and course projects.}
+		\resitem{Graded projects written in C/C++ and Ruby (with Ruby on Rails).}
+	\end{itemize}
+
+\item 
+	\ressubheading{Engineering of Software Subsystems}{RIT}{Teaching Assistant for Dr. James Vallino (SE)}{September 2011 - December 2011}
+	\begin{itemize}
+		\resitem{Assisted students with in-class exercises and unit questions based on a subset of the design patterns taught during the course.}
+		\resitem{Spent time with each student team to discuss course projects, including design decisions, application of design patterns, and alternatives considered.}
+		%\resitem{Graded course project implementations unit questions.}
+	\end{itemize}
+\end{itemize}
+\vspace*{-16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Honors, Awards, \& Activities}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-20pt}
+	\begin{center}\begin{longtable}{l@{\extracolsep{\fill}}r}
+	
+		%Golisano College of Computing and Information Sciences (GCCIS) and 
+		\multicolumn{2}{c}{RIT Honors Program\cftdotfill{\cftdotsep}2009 -- 2013}\\
+		\multicolumn{2}{c}{RIT Tau Beta Pi Engineering Honors Society\cftdotfill{\cftdotsep}2011 -- 2013}\\
+		\multicolumn{2}{c}{RIT Outstanding Undergraduate Student award, selected \cftdotfill{\cftdotsep} Winter 2012}\\
+		\multicolumn{2}{c}{RIT Computer Science MS Student Delegate, selected \cftdotfill{\cftdotsep} Winter 2012}\\
+		\multicolumn{2}{c}{Recipient of Golisano College Honors research assistantship stipend \cftdotfill{\cftdotsep}Spring 2011}\\
+		\multicolumn{2}{c}{Recipient of Golisano College Honors research assistantship stipend \cftdotfill{\cftdotsep}Winter 2009/2010}\\
+		\multicolumn{2}{c}{Recipient of RIT undergraduate research award stipend \cftdotfill{\cftdotsep}Summer 2009}\\
+		\multicolumn{2}{c}{RIT Golisano College Dean's List  \cftdotfill{\cftdotsep}2008 -- 2013} \\
+		\multicolumn{2}{c}{Student mentor for the FIRST LEGO League team hosted by RIT \cftdotfill{\cftdotsep} Fall 2009 -- Winter 2010}\\
+		\multicolumn{2}{c}{Rochester Foodlink volunteer \cftdotfill{\cftdotsep} Winter 2012/2013 -- March 2013}\\
+		\multicolumn{2}{c}{Society of Software Engineers, member \cftdotfill{\cftdotsep} Fall 2008 -- Winter 2009/2010}\\
+		\multicolumn{2}{c}{RIT Electronic Gaming Society, member \cftdotfill{\cftdotsep} Fall 2008 -- Spring 2010}\\
+		\multicolumn{2}{c}{RIT Intramural Flag Football Team, member \cftdotfill{\cftdotsep} Fall 2010}\\
+		\vphantom{E}
+	\end{longtable}
+\end{center} \vspace*{-52pt}
+
+\begin{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Academic and Personal Projects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-15pt}
+\begin{itemize}
+
+	\item Replicating the published cache timing attack on LUT-based implementations of the Advanced Encryption Standard on an FPGA-based embedded system.
+	\item Implemented a fully-compliant FTP client with a text-based interface in Java (approximately 2,000 lines of code). 
+	%\item Led white-box testing efforts for a six-person team project that focused on functionality, acceptance, unit, stress, and load testing activities for TuxGuitar.
+	\item Led the development effort for a four-person team that worked on a Kanban taskboard web application using Adobe Flex, Flash, BlazeDS, Hibernate, Jasper Reports, and Java (approximately 10,000 lines of code).
+	%\item Medical Image Viewing System featuring image scrolling and multi-axis reconstructions of X-rays, CT scans, and MRIs in various file formats.
+	\item Led team to develop a Java-based medical image viewing and reconstruction system featuring image scrolling and multi-axis reconstructions of X-ray, CT scan, and MRI images in various file formats (approximately 6,500 lines of code).
+	%\item Led development for a 4-person team implementing a Java-based Point of Sale system that leveraged SQLite for as the main database for information persistence; performed unit, integration, regression, and system testing; held team meetings (approximately 5,000 lines of code).
+	%\item Developed an abstract two-player game solver framework and AI in C++ (approximately 1,500 lines of code).
+	%\item Implemented an AOL instant messenger and IRC chat program in Java (approximately 2,000 lines of code).
+
+\end{itemize}
+\end{comment} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Technical Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-5pt}
+\begin{compactitem}
+
+\item
+	Programming Languages: C/C++, C\#, Java, Python, Scala, Ruby, Assembly (MIPS), JavaScript, Objective-C, Standard ML, Scheme
+%	\begin{itemize} 
+%		\resitem{}
+%	\end{itemize}
+
+\item
+	Modeling Languages and Tools: VHDL, Verilog, UML, SPIN (with PROMELA), Alloy
+%	\begin{itemize}
+%		\resitem{}
+%		\resitem{}
+%	\end{itemize}
+
+\item
+	Specialized Software: MATLAB, Mathematica, WEKA, Magma, Sage, LLVM
+%	\begin{itemize}
+%		\resitem{}
+%	\end{itemize}
+
+\item
+	Markup Languages: \LaTeX, HTML(5), CSS3
+%	\begin{itemize}
+%		\resitem{}
+%	\end{itemize}
+
+\item
+	Web Frameworks: Play (Java and Scala), Spring MVC, Ruby on Rails
+\end{compactitem} 
+\vspace*{-8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Personal Information}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-5pt}
+\begin{compactitem}
+\item Lake Placid Marathon finisher, June 12, 2011. Time of 4:28:08. 
+\item My Erd\H{o}s number is 3 (Me $\to$ Stanis{\l}aw Radziszowski $\to$ Brendan McKay $\to$ Paul Erd\H{o}s)
+\item Capable of reading and writing introductory Spanish. Learning elementary French and Polish.
+\end{compactitem}
+
+
+\end{document}

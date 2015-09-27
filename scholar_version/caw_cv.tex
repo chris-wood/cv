@@ -1,0 +1,408 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2012 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+%
+% Depending on your TeX distribution, you may need to download the revnum and longtable packages for this template to work!
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{longtable}
+\usepackage{revnum}
+\usepackage{paralist}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{tocloft}
+\usepackage{verbatim}
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+\setlength\LTleft{0.2in} % needed to make longtable full-width
+\setlength\LTright{0.2in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\fboxsep}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+
+% the next four commands allow for the \ressubheading environment to be 1, 2, 3, or 4 subrows, depending on which command you use. This is admittedly hack-ish, and should probably be replaced by a single more flexible command (with optional arguments) in the future
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingb}[6]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingc}[8]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+		\textit{#7} & \textit{#8} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand\foo[9]{%
+    \def\tempb{#2}%
+    \def\tempc{#3}%
+    \def\tempd{#4}%
+    \def\tempe{#5}%
+    \def\tempf{#6}%
+    \def\tempg{#7}%
+    \def\temph{#8}%
+    \def\tempi{#9}%
+    \foocontinued
+}
+\newcommand\foocontinued[7]{%
+    % Do whatever you want with your 9+7 arguments here.
+}
+
+\newcommand{\ressubheadingd}[1]{
+	\def\argten{#1}%
+	\ressubheadingdb
+}
+\newcommand{\ressubheadingdb}[9]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{\argten} & #1 \\
+		\textit{#2} & \textit{#3} \\
+		\textit{#4} & \textit{#5} \\
+		\textit{#6} & \textit{#7} \\
+		\textit{#8} & \textit{#9} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+{\large \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\LARGE Christopher A. Wood} & \textbf{\today} \\
+71-4 Lilac Drive & caw4567@rit.edu \\
+Rochester, NY 14620 & 315-806-5939 \\
+\end{tabular*}}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Academic Information}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Rochester Institute of Technology}{Rochester, NY}{M.S. Computer Science}{2012 -- 2013 (expected)}
+	\begin{itemize}
+		\resitem{Advisor: Stanis{\l}aw Radziszowski}
+		%Optimal Representations of Cryptographically Significant Vectorial Boolean Functions
+		\resitem{Thesis: Optimal Representations of Cryptographic Substitution Boxes for Efficient Combinational Implementations (in progress)}
+		\resitem{GPA: 4.0/4.0}
+		\resitem{Thesis-related courses: Cryptography, Intelligent Security Systems, Data Communications and Networks, Algorithms, Optimization Methods}
+	\end{itemize}
+\item
+	\ressubheading{Rochester Institute of Technology}{Rochester, NY}{B.S. Computer Science and Software Engineering}{2008 -- 2012}
+	\begin{itemize}
+		\resitem{Concentrations: Computational Mathematics and Computer Engineering}
+		\resitem{Minors: Mathematics and Writing Studies}
+		\resitem{GPA: 3.97/4.0 (Primary Field of Study GPA: 4.0/4.0)}
+		\resitem{Main electives: Graph Theory, Number Theory, Operating Systems, Programming Language Concepts, Computer Organization, Modern Physics, Real-Time and Embedded Systems}
+	\end{itemize}
+
+\end{itemize}
+\vspace*{-16pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications {\mdseries(available at \hyperref{http://www.christopher-wood.com}{}{}{www.christopher-wood.com})}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-0.15in}\subsection*{Journal Articles}
+
+\begin{enumerate}[J-1.]
+
+\item 
+	C. Wood and J. Jacob,``Characterization Results for the $L(2,1)$-Labeling Problem on Trees,'' {\it in preparation}.
+
+\item
+	C. Wood and J. Jacob,``Forbidden Subtree Construction Techniques for Trees Under the $L(2,1)$-Labeling Problem on Trees,'' {\it submitted to the SIAM Journal on Discrete Mathematics}.
+
+\item
+	P. Bajorski, A. Kaminsky, M. Kurdziel, M. Lukowiak, S. Radziszowski, and C. Wood, ``Statistical Analysis and Modeling of a Tree-Based Group Key Distribution Method in Tactical Wireless Networks,'' {\it submitted to the IEEE Transactions on Wireless Communications}.
+
+\item
+	M. Lukowiak, S. Radziszowski, J. Vallino, C. Wood, ``Cybersecurity Education: Bridging the Gap between Hardware and Software Domains,'' {\it submitted to the IEEE Transactions on Education}.
+\end{enumerate}
+
+\subsection*{Conference Proceedings}
+\begin{enumerate}[C-1.]
+\item 
+	M. Lukowiak, A. Meneely, S. Radziszowski, J. Vallino, and C. Wood, ``Developing an Applied, Security-Oriented Computing Curriculum,'' In {\it Proceedings of the ASEE 2012}, San Antonio, Texas. June 2012.
+
+\item
+	C. A. Wood, ``Chaos-Based Symmetric Key Cryptosystems,'' In {\it Proceedings of the 2011 International Conference on Security \& Management}, Las Vegas, Nevada. July 2011.
+
+\item 
+	C. A. Wood and R. K. Raj, ``Keyloggers in Cybersecurity Education,'' In {\it Proceedings of the 2010 International Conference on Security \& Management}, Las Vegas, Nevada. July 2010.
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Conference Presentations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}[P-1.]
+%\item
+%	\ressubheading{The NPPT Bound Entanglement Problem}{}{Summer Research Workshop on Quantum %Information Science (China)}{July 2012}
+
+\item
+	``Characterization Results for the L(2,1)-Labeling Problem on Trees,''\\
+\emph{AMS Sectional Meeting, Rochester Institute of Technology, Rochester, NY. September 22, 2012}.
+
+\item 
+	``Layered Driver Rootkit Detection on Microsoft Windows PCs,'' Poster Presentation, \\
+\emph{RIT Undergraduate Symposium, Rochester Institute of Technology, Rochester, NY. August 24, 2009}.
+\end{enumerate}
+\vspace*{-16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Research Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Keyboard Biometric-Based Continuous Authentication System}{RIT}{Intelligent Security Systems, Machine Learning}{September 2012 - present}
+	\begin{itemize}
+		\resitem{\emph{Advisor:} Dr. Leonid Reznik (CS)}
+		\resitem{I am implementing a real-time keylogger, feature extraction, and classifier engine for use in continuous authentication schemes. Part of the work includes comparing classifiers based on free-form text input against those based on structured text-input. Results are being compared with past and present keyboard-based biometric authentication schemes.}
+	\end{itemize}
+
+\item
+	\ressubheading{Secure Logging Schemes for Cloud-Based SaaS Architectures}{RIT}{Cryptography, Computer Security, Secure Software Design}{July 2012 - present}
+	\begin{itemize}
+		\resitem{\emph{Advisors:} Dr. Rajendra K. Raj (CS) and Dr. Andy Meneely (SE)}
+		\resitem{I am developing a novel secure logging architecture for cloud-based SaaS applications that utilizes ciphertext-policy attribute based encryption (CP-ABE) for log file integrity.}
+	\end{itemize}
+
+\item
+	\ressubheading{Wireless Ad-hoc Network Group Key Management}{RIT}{Applied Cryptography, Wireless Networking}{May 2011 - present}
+	\begin{itemize}
+		\resitem{\emph{Advisors:} Dr. Stanis{\l}aw Radziszowski (CS), Dr. Marcin Lukowiak (CE), Dr. Peter Bajorski (Statistics)}
+		\resitem{Resulted in publication J-3.}
+		\resitem{We are focusing on group key management protocols for wireless ad-hoc radio networks with constrained channel bandwidths and computational power. We explore solutions based on public- and private-key cryptosystems with varying levels of pre-placed radio data for node authentication and key generation. Our work involves implementing network simulators in SMURPH/SIDE and NS3 to obtain empirical performance measurements. We have also developed a mathematical model to compare with quantitative performance metrics.}
+	\end{itemize}
+	%as well as implementing a SPIN model to check the correctness of our protocol (i.e. its adherence to the specification)
+
+\item
+	\ressubheading{$L(2,1)$-Labeling Problem}{RIT}{Computational Graph Theory}{September 2011 - September 2012}
+	\begin{itemize}
+		\resitem{\emph{Advisor:} Dr. Jobby Jacob (Mathematics)}
+		\resitem{Resulted in publications J-1 and J-2 and presentation P-1.}
+		\resitem{I worked on developing a characterization of $L(2,1)$ spans of trees based on their structural properties. As part of this work I implemented a dynamic programming labeling algorithm to assist in the study of tree characterization, which helped to develop tree construction algorithms that are capable of producing infinitely many trees $T$ with a label span of $(\Delta(T) + 2)$. With this, we found a complete $L(2,1)$ label span characterization of trees. We also briefly investigated the $L(2,1)$-labeling problem on cubic bipartite graphs.}
+	\end{itemize}
+	%up to twenty vertices using the aforementioned labeling algorithm and nauty graph generation program.
+
+\item
+	\ressubheading{Secure Operating System Design Principles}{RIT}{Computer Security, Operating Systems}{March 2011 - June 2011}
+	\begin{itemize}
+		\resitem{\emph{Advisor:} Dr. Rajendra K. Raj (CS)}
+		\resitem{I researched secure operating system design principles at all levels of the software stack. The main deliverable was a case study for a variety of popular operating systems with different purposes, including Microsoft Singularity, Chrome OS, Android, QNX, and Microsoft Azure.}
+	\end{itemize}
+
+\item
+	\ressubheading{Rootkit Design, Implementation, and Detection}{RIT}{Computer Security, Operating Systems, Malware Design and Detection}{May 2007 -- Aug. 2007}
+	\begin{itemize}
+		\resitem{\emph{Advisor:} Dr. Rajendra K. Raj (CS)}
+		\resitem{Resulted in publication C-3 and presentation P-2.}
+		\resitem{I examined malware rootkits that targeted the Windows NT family of operating systems. This study included user-mode and kernel-mode rootkit implementations and state-of-the-art static and dynamic techniques. As part of this work I developed a Windows NT filter driver in C to help determine the presence of keystroke-monitoring malware (targeted towards a specific rootkit implementation).}
+	\end{itemize}
+
+\end{itemize}
+\vspace*{-16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Professional Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Intel Corporation, Virtual \& Parallel Computing Group}{Folsom, CA}{Graphics Software Engineer Intern}{June 2012 - August 2012}
+	\begin{itemize}
+		\resitem{Developed production features for tool that processes hardware specifications to generate web content and source code for VHDL and C/C++ testbeds.}
+		\resitem{Interacted with internal customers within the VPG to utilize debug tools and environments for architecture specification and post-silicon testing.}
+	\end{itemize}
+
+\item
+	\ressubheading{L-3 Communications}{Victor, NY}{Software Engineer Intern}{March 2011 - August 2011}
+	\begin{itemize}
+		\resitem{Designed and implemented a library and supporting drivers for the u-blox NEO5/6 GPS receiver driven by an Analog Devices Blackfin processor.}
+		\resitem{Extended an existing FAT file system driver to add support for SD devices.}
+		\resitem{Improved functionality of an existing CPLD design used to control the power supply in an embedded system.}
+	\end{itemize}
+
+\item
+	\ressubheading{Rochester Software Associates}{Rochester, NY}{Software Engineer Intern}{November 2010 - March 2011}
+	\begin{itemize}
+		\resitem{Led the design, development, and documentation efforts for a new printer job management application that would service any number of jobs from clients across the network.}
+		\resitem{Tested and debugged an existing .NET implementation of an LPD client.}
+	\end{itemize}
+
+\item
+	\ressubheading{C Speed, LLC}{Liverpool, NY}{Software Engineer Intern}{May 2010 - August 2010}
+	\begin{itemize}
+		\resitem{Designed and implemented an internal manufacturing part supply management system.}
+		\resitem{Implemented embedded firmware features and test routines in C, C++, and Assembly for Coldfire V2 processors.}
+	\end{itemize}
+\end{itemize}
+\vspace*{-16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Teaching \& Other Academic Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item 
+	\ressubheading{Hardware and Software Design with Cryptographic Applications}{RIT}{Teaching Assistant and Lecturer for Dr. Marcin Lukowiak (CE)}{February 2011 - present}
+	\begin{itemize}
+		\resitem{Developed and delivered lecture material on real-time and embedded software optimization techniques and the Impulse C high-level synthesis tool.}
+		\resitem{Assisted students with weekly assignments and graded lab and project deliverables.}
+		\resitem{Currently porting the AES cache timing attack on a Xilinx ML507 platform with MicroBlaze soft-core processor for student labs.}
+	\end{itemize}
+
+\item 
+	\ressubheading{Computer Science I, II, and IV}{RIT}{Student Lab Assistant and Grader}{January 2009 - present}
+	\begin{itemize}
+		\resitem{Proctor weekly problem solving sessions and run lab meetings with brief lectures to cover weekly material.}
+		\resitem{Hold four tutoring office hours per week to assist students in need.}
+		\resitem{Grade weekly lab assignments and midterm examinations.}
+	\end{itemize}
+
+\item 
+	\ressubheading{Personal Software Engineering}{RIT}{Teaching Assistant for Professor Tom Reichlmayr (SE)}{December 2011 - March 2012}
+	\begin{itemize}
+		\resitem{Assisted students with in-class programming assignments and course projects.}
+		\resitem{Graded student projects based on the C/C++ and Ruby programming languages and Ruby on Rails web framework.}
+	\end{itemize}
+
+\item 
+	\ressubheading{Engineering of Software Subsystems}{RIT}{Teaching Assistant for Dr. James Vallino (SE)}{September 2011 - December 2011}
+	\begin{itemize}
+		\resitem{Assisted students with in-class exercises and unit questions based on a subset of the design patterns taught during the course.}
+		\resitem{Spent time with each student team to discuss course projects, including design decisions, application of design patterns, and alternatives considered.}
+		%\resitem{Graded course project implementations unit questions.}
+	\end{itemize}
+\end{itemize}
+\vspace*{-16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Honors \& Awards}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-10pt}
+	\begin{center}\begin{longtable}{l@{\extracolsep{\fill}}r}
+	
+		%Golisano College of Computing and Information Sciences (GCCIS) and 
+		\multicolumn{2}{c}{RIT Honors Program \cftdotfill{\cftdotsep} 2009 -- present}\\
+		\multicolumn{2}{c}{RIT Tau Beta Pi Engineering Honors Society, member \cftdotfill{\cftdotsep}2010 -- present}\\
+		\multicolumn{2}{c}{Recipient of Golisano College Honors research assistantship award \cftdotfill{\cftdotsep}Spring 2011}\\
+		\multicolumn{2}{c}{Recipient of Golisano College Honors research assistantship award \cftdotfill{\cftdotsep}Winter 2009/2010}\\
+		\multicolumn{2}{c}{Recipient of RIT undergraduate research award stipend \cftdotfill{\cftdotsep}Summer 2009}\\
+		\multicolumn{2}{c}{RIT Golisano College Dean's List  \cftdotfill{\cftdotsep}2008 -- present} \\
+		\multicolumn{2}{c}{Student mentor for the FIRST LEGO League team hosted by RIT \cftdotfill{\cftdotsep} Fall 2009 -- Winter 2010}\\
+		\multicolumn{2}{c}{Society of Software Engineers, member \cftdotfill{\cftdotsep} Fall 2008 -- Winter 2009/2010}\\
+		\multicolumn{2}{c}{RIT Electronic Gaming Society, member \cftdotfill{\cftdotsep} Fall 2008 -- Spring 2010}\\
+		\multicolumn{2}{c}{RIT Intramural Flag Football Team \cftdotfill{\cftdotsep} Fall 2010}\\
+
+		\vphantom{E}
+\end{longtable}
+\end{center} \vspace*{-52pt}
+
+\begin{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Academic and Personal Projects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+	\item Replicating the published cache timing attack on LUT-based implementations of the Advanced Encryption Standard on an FPGA-based embedded system.
+	\item Implemented a fully-compliant FTP client with a text-based interface in Java (approximately 2,000 lines of code). 
+	%\item Led white-box testing efforts for a six-person team project that focused on functionality, acceptance, unit, stress, and load testing activities for TuxGuitar.
+	\item Led the development effort for a four-person team that worked on a Kanban taskboard web application using Adobe Flex, Flash, BlazeDS, Hibernate, Jasper Reports, and Java (approximately 10,000 lines of code).
+	%\item Medical Image Viewing System featuring image scrolling and multi-axis reconstructions of X-rays, CT scans, and MRIs in various file formats.
+	\item Led team to develop a Java-based medical image viewing and reconstruction system featuring image scrolling and multi-axis reconstructions of X-ray, CT scan, and MRI images in various file formats (approximately 6,500 lines of code).
+	%\item Led development for a 4-person team implementing a Java-based Point of Sale system that leveraged SQLite for as the main database for information persistence; performed unit, integration, regression, and system testing; held team meetings (approximately 5,000 lines of code).
+	%\item Developed an abstract two-player game solver framework and AI in C++ (approximately 1,500 lines of code).
+	%\item Implemented an AOL instant messenger and IRC chat program in Java (approximately 2,000 lines of code).
+
+\end{itemize}
+\end{comment} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Technical Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{compactitem}
+
+\item
+	Programming Languages: C/C++, C\#, Java, Python, Ruby, Assembly (MIPS), Javascript, Scheme
+%	\begin{itemize} 
+%		\resitem{}
+%	\end{itemize}
+
+\item
+	Modeling Languages and Tools: VHDL, Verilog, UML, SPIN (with PROMELA), Alloy
+%	\begin{itemize}
+%		\resitem{}
+%		\resitem{}
+%	\end{itemize}
+
+\item
+	Specialized Software: Mathematica, MATLAB, R, Weka
+%	\begin{itemize}
+%		\resitem{}
+%	\end{itemize}
+
+\item
+	Markup Languages: \LaTeX, HTML, CSS
+%	\begin{itemize}
+%		\resitem{}
+%	\end{itemize}
+\end{compactitem} 
+\vspace*{-8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Personal Information}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{compactitem}
+\item Born in Syracuse, NY
+\item Son of Robert and Jill Wood
+\item Lake Placid Marathon finisher, June 12, 2011. Time of 4:28:08.
+\end{compactitem}
+
+
+\end{document}

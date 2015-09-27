@@ -1,0 +1,238 @@
+% LaTeX resume using res.cls
+\documentclass[line,margin]{res} 
+\usepackage{multicol}
+\usepackage{verbatim}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+
+\begin{document}
+
+\name{Christopher A. Wood}
+% \address used twice to have two lines of address
+\address{71-4 Lilac Drive, Rochester, NY 14620}
+\address{caw4567@rit.edu - (315) 806-5939}
+
+\begin{resume}
+ 
+%\section{OBJECTIVE}       A position in the field of computer science research and development with a specific %focus on computer security, including elements of hardware/software co-design, applied cryptography, %operating system hardening and protection, and/or malware design and detection.
+ 
+\section{EDUCATION} 
+		{\sl Master of Science,} Computer Science, expected 08/2013 \\
+		{\sl Bachelor of Science,} Software Engineering and Computer Science, expected 08/2013 \\
+                Rochester Institute of Technology, Rochester, NY 
+\vspace{0.005cm} 
+
+                {\sl Concentrations}: Computational Mathematics and Computer Engineering \\
+                {\sl Minors}: Mathematics and Writing Studies \\
+	     	{\sl GPA}: 3.97/4.0 (Primary Field of Study GPA: 4.0/4.0) 
+\vspace{0.005cm} 
+
+		{\sl MS Thesis}: ``Optimal Representations of Cryptographically Significant Vectorial Boolean Functions'', expected 08/2013, under development.
+\vspace{0.005cm} 
+
+		{\sl Relevant coursework}: \\Algorithms, Data Communications and Networks, Intelligent Security Systems, Compiler Construction, Optimization Methods, Operating Systems, Programming Language Concepts, Computer Organization, Computer Science Theory, Number Theory, Graph Theory, Linear Algebra, Discrete Mathematics, Real-time and Embedded Systems, Performance Engineering of Real-time and Embedded Systems, Concurrent Systems, Software Formal Methods, Engineering of Software Subsystems, Software Architectures, Software Testing, Professional Communications, Technical Writing.
+
+\section{PUBLICATIONS}
+	\begin{enumerate}
+	\item C. Wood and J. Jacob, "Forbidden Subtree Construction Techniques for Trees Under the $L(2,1)$-Labeling Problem on Trees," in preparation.
+	\item C. Wood and J. Jacob, "Characterization Results for the $L(2,1)$-Labeling Problem on Trees," in preparation.
+	\item P. Bajorski, A. Kaminsky, M. Kurdziel, M. Lukowiak, S. Radziszowski, and C. Wood, "Statistical Analysis and Modeling of a Tree-Based Group Key Distribution Method in Tactical Wireless Networks," submitted.
+	\item M. Lukowiak, S. Radziszowski, J. Vallino, C. Wood, "Cybersecurity Education: Bridging the Gap between Hardware and Software Domains," submitted.
+	\item M. Lukowiak, A. Meneely, S. Radziszowski, J. Vallino, and C. Wood, "Developing an Applied, Security-Oriented Computing Curriculum," In Proceedings of the ASEE 2012, San Antonio, Texas. June 2012.
+	\item C. A. Wood, "Chaos-Based Symmetric Key Cryptosystems," In Proceedings of the 2011 International Conference on Security \& Management, Las Vegas, Nevada, USA. July 2011.
+	\item C. A. Wood and R. K. Raj, "Keyloggers in Cybersecurity Education," In Proceedings of the 2010 International Conference on Security \& Management, Las Vegas, Nevada, USA. July 2010.
+	\end{enumerate}
+
+\section{INVITED \\TALKS}
+	\begin{enumerate}
+		\item C. Wood, “Characterization Results for the L(2,1)-Labeling Problem on Trees”, AMS Sectional Meeting, Rochester Institute of Technology, Rochester, NY, September, 22 2012.	
+	\end{enumerate}
+
+\section{POSTER\\PRESENTATIONS}
+	\begin{enumerate}
+		\item C. A. Wood, "Layered Driver Rootkit Detection on Microsoft Windows PCs", Poster Presentation, RIT Undergraduate Symposium, August 2009.
+	\end{enumerate}
+
+\section{RESEARCH\\EXPERIENCE}
+	{\sl Secure Logging Schemes for Cloud-Based SaaS Architectures} \hfill   9/12 - present\\
+	 Advisors: Dr. Rajenda K. Raj (RIT Computer Science Department) and Dr. Andy Meneely (RIT Software Engineering Department)
+	\begin{itemize} \itemsep -2pt %reduce space between items
+		\item Reconstructing a cloud-based secure logging architecture that leverages ciphertext-policy attribute based encryption (CP-ABE) for log file integrity.
+		\item Conducting a literature survey on past and present secure logging architectures.
+	\end{itemize}
+
+	{\sl Keyboard Biometric-Based Continuous Authentication Schemes} \hfill   9/12 - present\\
+	 Advisor: Dr. Leon Reznik (RIT Computer Science Department) 
+	\begin{itemize} \itemsep -2pt %reduce space between items
+		\item Implementing a real-time keyboard keylogger and feature extraction engine for use in continuous authentication schemes.
+		\item Comparing classifiers based on dynamic free-form text input against those based on structured text-input.
+		\item Conducting a survey on past and present keyboard-based biometric authentication schemes.
+	\end{itemize}
+
+	{\sl Wireless Ad-hoc Network Group Key Management} \hfill    5/11 - present\\
+	Advisors: Dr. Stanis{\l}aw Radziszowski (RIT Computer Science Department), Dr. Marcin Lukowiak (RIT Computer Engineering Department), Dr. Peter Bajorski (RIT Graduate Statistics Department), Dr. Michael Kurdziel (Harris RF Communications Division)
+	\begin{itemize} \itemsep -2pt %reduce space between items
+	\item Focusing on a group key management protocols for wireless ad-hoc radio networks with constrained channel bandwidths and computational power.
+	\item Exploring solutions based on public- and private-key cryptosystems with varying levels of pre-placed radio data for node authentication and key generation.
+	\item Implementing network simulators in SMURPH/SIDE and NS3 to obtain empirical performance measurements for proposed protocols.
+	\item Implementing a SPIN model to check the correctness of our protocol (i.e. its adherence to the specification).
+	\item Developing a theoretical mathematical model to compare with quantitative performance metrics.
+	\end{itemize}
+
+	{\sl $L(2,1)$-Labeling Problem} \hfill   9/11 - 9/12\\
+	 Advisor: Dr. Jobby Jacob (RIT School of Mathematical Sciences)
+	\begin{itemize} \itemsep -2pt %reduce space between items
+	\item Studied previous results from the $L(2,1)$-labeling problem on trees.
+	\item Implemented a dynamic programming labeling algorithm to assist in the study of tree characterization.
+	\item Developed tree construction algorithms that are capable of producing infinitely many trees $T$ with a label span of $(\Delta(T) + 2)$.
+	\item Made progress in the complete $L(2,1)$ label span characterization of trees up to twenty vertices using the aforementioned labeling algorithm and nauty graph generation program.
+	\item Briefly investigated the $L(2,1)$-labeling problem on cubic bipartite graphs.
+	\end{itemize}
+
+	{\sl Secure Operating System Design Principles} \hfill    3/11 - 6/11\\
+	 Advisor: Dr. Rajenda K. Raj (RIT Department of Computer Science) 
+	\begin{itemize} \itemsep -2pt %reduce space between items
+	\item Researched secure operating system design principles at all levels of the software stack.
+	\item Conducted case studies for a variety of popular operating systems with different purposes, including Microsoft Singularity, Chrome OS, Android (the entire stack), QNX, and Microsoft Azure.
+	\item Began developing a primitive operating system, virtual machine, and programming language to explore the implementation aspects of secure systems.
+	\end{itemize}
+
+	{\sl Rootkit Design, Implementation, and Detection} \hfill    6/09 - 3/10\\
+	 Advisor: Dr. Rajendra K. Raj (RIT Department of Computer Science) 
+	\begin{itemize} \itemsep -2pt %reduce space between items
+	\item Explored malware rootkits that targeted the Windows NT family of operating systems.
+	\item Studied user-mode and kernel-mode rootkit implementations and state-of-the-art static and dynamic techniques.
+	\item Developed a Windows NT filter driver in C to help determine the presence of keystroke-monitoring malware (targeted towards a specific rootkit implementation).
+	\end{itemize}
+ 
+\section{PROFESSIONAL \\EXPERIENCE} 
+	 {\sl Intel Corporation, Virtual and Parallel Computing Group (VPG) } \hfill   6/12 - 8/12\\
+                Graphics Software Engineer Intern \hfill Folsom, CA
+                 \begin{itemize}  \itemsep -2pt %reduce space between itemsddd
+                 \item Developed production features for language transformation software for hardware specifications to test platform source files.
+		\item Interacted with internal customers within the VPG to utilize debug tools and environments for architecture specification and post-silicon testing.
+		 \item Drove a large refactor of an existing system to make use of multiple design patterns, including the Factory, Decorator, and Adapter patterns.
+                 \end{itemize} 
+	
+	{\sl L-3 Communications, Linkabit Division} \hfill 3/11 - 8/11\\
+	      Software Engineer Intern \hfill Victor, NY
+                 \begin{itemize}  \itemsep -2pt % reduce space between itemssss
+                 \item Designed and implemented a library and supporting drivers for the u-blox NEO5/6 GPS receiver to be driven by an Analog Devices Blackfin processor.
+		\item Extended an existing FAT file system driver to add support for SD devices.
+		\item Improved functionality of an existing CPLD design used to control the power supply in an embedded system.
+		\item Responsible for managing an internal project build machine using Cruise Control and running Coverity static analysis tools on C/C++ projects to obtain defect reports.
+                \end{itemize}
+
+	{\sl Rochester Software Associates} \hfill 11/10 - 3/11\\
+	      Software Engineer Intern \hfill Rochester, NY
+                 \begin{itemize}  \itemsep -2pt % reduce space between items
+                 \item Led the design, development, and documentation efforts for a new printer job management application that would service any number of jobs from clients across the network.
+		\item Tested and debugged an existing implementation of the LPD protocol.
+                \end{itemize}
+
+%	 {\sl RIT Honors Program} \hfill    3/11 - 6/11, 11/09 - 2/10, and 6/09 - 9/09\\
+ %               Student Researcher \hfill Rochester, NY
+  %               \begin{itemize}  \itemsep -2pt %reduce space between itemsddd
+%		\item Extensively studied secure operating system design and implementation with a focus on %Chrome OS, Android, QNX, and Windows Azure
+ %                \item Studied user-mode and kernel-mode rootkit implementation and detection techniques
+%		\item Developed Windows NT filter driver in C to help determine the presence of %keystroke-%monitoring malware
+%		\item Added TCP/IP support to keystroke-logging rootkit using the Transport Driver Interface in %C++
+ %                \end{itemize} 
+
+	  {\sl C Speed, LLC} \hfill   5/10 - 8/10\\
+                Software Engineer Intern \hfill Liverpool, NY
+                 \begin{itemize}  \itemsep -2pt %reduce space between itemsddd
+                 \item Implemented embedded firmware features and test routines in C, C++, and Assembly for Coldfire V2 processors.
+		\item Designed and implemented an internal manufacturing part supply management system.
+                 \end{itemize} 
+
+\section{TEACHING \\EXPERIENCE}
+	{\sl RIT Software Engineering Department} \hfill   2/11 - present\\
+                Teaching Assistant \hfill Rochester, NY
+                 \begin{itemize}  \itemsep -2pt %reduce space between itemsddd
+                 \item Helped design and teach a new course entitled "Hardware and Software Design with Cryptographic Applications".
+		\item Developed lecture material on real-time and embedded software optimization techinques and the Impulse C high-level synthesis tool.
+		\item Prepared and presented material on software application profiling and optimization techniques.
+		\item Assisted students with weekly assignments and graded lab and project deliverables.
+		\item Porting the AES cache timing attack on a Xilinx ML507 platform with MicroBlaze soft-core processor for student labs.
+                 \end{itemize} 
+
+	{\sl RIT Computer Science Department} \hfill    12/09 - present\\
+	Computer Science I, II, and IV Lab Assistant \hfill Rochester, NY
+	\begin{itemize} \itemsep -2pt %reduce space between items
+	\item Run weekly lab meetings and problem solving sessions with brief lectures to cover weekly material.
+	\item Hold four tutoring office hours per week to assist students in need.
+	\item Grade weekly lab assignments and midterm examinations.
+	\end{itemize}
+
+\begin{comment}
+	{\sl RIT Software Engineering Department} \hfill    1/12 - 5/12\\
+	Data Structures and Algorithms Tutor \hfill Rochester, NY
+	\begin{itemize} \itemsep -2pt %reduce space between items
+	\item Provided personal assistance for students trying to understand the material tought in the course.
+	\item Analyzed design and implementation decisions for course projects.
+	\end{itemize}
+
+{\sl RIT Computer Science Department} \hfill   9/10 - 3/11 \\
+                Computer Organization Grader \hfill Rochester, NY
+                 \begin{itemize}  \itemsep -2pt %reduce space between itemsddd
+                 \item Graded weekly programming assignments and long-term projects with automated test programs and manual MIPS assembly inspection.
+                 \item Assisted in grading of midterm and final examinations.
+                 \end{itemize} 
+
+\end{comment}
+
+	{\sl RIT Software Engineering Department} \hfill    12/11 - 3/12\\
+	Personal Software Engineering Teaching Assistant \hfill Rochester, NY
+	\begin{itemize} \itemsep -2pt %reduce space between items
+	\item Assisted students with in-class programming assignments and course projects.
+	\item Graded student projects, including those based on the C and Ruby programming languages.
+	\end{itemize}
+
+	{\sl RIT Software Engineering Department} \hfill    9/11 - 12/11\\
+	Engineering of Software Subsystems Teaching Assistant \hfill Rochester, NY
+	\begin{itemize} \itemsep -2pt %reduce space between items
+	\item Assisted students with in-class exercises and unit questions based on a subset of the design patterns taught during the course.
+	\item Spent time with each student team to discuss course projects, including design decisions, application of design patterns, and alternatives considered.
+	\item Graded course project implementations unit questions.
+	\end{itemize}
+
+\section{ACADEMIC AND \\ PERSONAL \\PROJECTS}             
+	\begin{itemize}
+	\item Replicating the published cache timing attack on LUT-based implementations of the Advanced Encryption Standard on an FPGA-based embedded system.
+	\item Implemented a fully-compliant FTP client with a text-based interface in Java (approximately 2,000 lines of code). 
+	%\item Led white-box testing efforts for a six-person team project that focused on functionality, acceptance, unit, stress, and load testing activities for TuxGuitar.
+	\item Led the development effort for a four-person team that worked on a Kanban taskboard web application using Adobe Flex, Flash, BlazeDS, Hibernate, Jasper Reports, and Java (approximately 10,000 lines of code).
+	%\item Medical Image Viewing System featuring image scrolling and multi-axis reconstructions of X-rays, CT scans, and MRIs in various file formats.
+	\item Led team to develop a Java-based medical image viewing and reconstruction system featuring image scrolling and multi-axis reconstructions of X-ray, CT scan, and MRI images in various file formats (approximately 6,500 lines of code).
+	%\item Led development for a 4-person team implementing a Java-based Point of Sale system that leveraged SQLite for as the main database for information persistence; performed unit, integration, regression, and system testing; held team meetings (approximately 5,000 lines of code).
+	%\item Developed an abstract two-player game solver framework and AI in C++ (approximately 1,500 lines of code).
+	%\item Implemented an AOL instant messenger and IRC chat program in Java (approximately 2,000 lines of code).
+	\end{itemize}
+
+\section{HONORS AND \\ AWARDS}
+	\begin{itemize}
+	\item Golisano College of Computing and Information Sciences (GCCIS) and RIT Honors Program, Member.
+	\item RIT Tau Beta Pi Engineering Honors Society, Member.
+	\item Student mentor for the FIRST LEGO League team hosted by RIT, 2009-2011.
+	\item Recipient of GCCIS Honors research assistantship award for Winter 2009-2010 and Spring 2011.
+	\item Recipient of RIT Undergraduate Research Award stipend for Summer 2009.
+	\item Appointed to GCCIS Dean's List (Fall 2008 - present).
+	%\item Society of Software Engineers at RIT, Member.
+	\end{itemize}
+
+\section{PERSONAL \\INTERESTS}
+	\begin{itemize}
+	\item Marathon finisher, full 42km Lake Placid Marathon, June 12, 2011, 4:29:15 completion time.
+	\item Acoustic and electric guitar, 3 years.
+	\end{itemize}
+
+\end{resume}
+\end{document}
+
+
+
+
+
+
+
